@@ -73,5 +73,5 @@ jobs:
             docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
             docker stop my-node-app || true
             docker rm my-node-app || true
-            docker pull ghcr.io/${{ github.repository }}:main
-            docker run -d -p 80:3000 --name my-node-app ghcr.io/${{ github.repository }}:main
+            docker pull ghcr.io/ceci222001/pr-ctica-sast-sonarqube:main
+            docker run -d -p 80:3000 --name my-node-app ghcr.io/ceci222001/pr-ctica-sast-sonarqube:main
